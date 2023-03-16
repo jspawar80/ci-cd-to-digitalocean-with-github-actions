@@ -17,5 +17,3 @@ jobs:
           script: |
             mkdir test 
             cd test 
-            git clone git@github.com:Mulubwa17/ci-cd-to-digitalocean-with-github-actions.git 
-            echo 'Deployment successful to digital ocean' 
