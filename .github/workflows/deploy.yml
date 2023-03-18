@@ -18,4 +18,4 @@ jobs:
         
      
           script: |
-            if [ -d "/var/app/${{ secrets.APP_NAME }}" ]; then git pull && cd /var/app/${{ secrets.APP_NAME }} && pm2 restart ${{ secrets.APP_NAME }}; else cd /var/app/ && git clone git@github.com:jspawar80/ci-cd-to-digitalocean-with-github-actions.git/${{ secrets.APP_NAME }}.git && cd /var/app/${{ secrets.APP_NAME }} && npm i && pm2 start index.js --name "${{ secrets.APP_NAME }}" &&  echo "Error: Directory /var/app/${{ secrets.APP_NAME }} dir already exists."; fi
+            if [ -d "/var/app/${{ secrets.APP_NAME }}" ]; then git pull && cd /var/app/${{ secrets.APP_NAME }} && pm2 restart ${{ secrets.APP_NAME }}; else cd /var/app/ && git clone git@github.com:jspawar80/${{ secrets.APP_NAME }}.git && cd /var/app/${{ secrets.APP_NAME }} && npm i && pm2 start index.js --name "${{ secrets.APP_NAME }}" &&  echo "Error: Directory /var/app/${{ secrets.APP_NAME }} dir already exists."; fi
